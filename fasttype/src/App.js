@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import Form from "./Form";
 
 function App() {
+  const START_TIME = 10;
   const [text, setText] = useState("");
-  const [timer, setTimer] = useState(20);
+  const [timer, setTimer] = useState(START_TIME);
   const [wordCount, setWordCount] = useState(0);
   const [isStarted, setIsStarted] = useState(false);
 
@@ -18,12 +19,15 @@ function App() {
 
   useEffect(() => {
     if (isStarted && timer > 0) {
+      setWordCount(0);
       setTimeout(() => {
         setTimer((timer) => timer - 1);
       }, 1000);
-    } else {
+    } else if (isStarted && timer === 0) {
       setWordCount(text.trim().split(" ").length);
       setIsStarted(false);
+      setTimer(START_TIME);
+      setText("");
     }
   }, [timer, isStarted]);
 
