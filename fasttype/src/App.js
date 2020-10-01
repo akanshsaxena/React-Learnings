@@ -32,7 +32,7 @@ function App() {
   }, [timer, isStarted]);
 
   return (
-    <div className="App">
+    <div className="app">
       <Form
         text={text}
         handleChange={handleChange}

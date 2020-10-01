@@ -1,13 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@400;700&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Sansita Swashed', cursive;
+  color: #BF211E;
+  background-color: #F9A03F;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.form {
+  margin-top: 70px;
+  /* padding: 10px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: inset 0px 6px 16px 1px #BF211E;
+}
+
+.form h1 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.form h1 span {
+  font-weight: 700;
+}
+
+.textarea {
+  width: 600px;
+  height: 200px;
+}
+
+.textarea:disabled {
+  cursor: not-allowed;
+}
+
+.btn {
+  display: block;
+  margin: 10px auto;
+  padding: 5px 50px;
+  cursor: pointer;
+  font-family: 'Sansita Swashed', cursive;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: #f8cecd;
+  color: #BF211E;
+  border: #BF211E solid 1px;
+  border-radius: 2px;
+}
+
+.btn:hover {
+  background: #fcbcbb;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.form h3 {
+  display: inline;
 }

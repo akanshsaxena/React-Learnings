@@ -2,15 +2,23 @@ import React from "react";
 
 export default function Form(props) {
   return (
-    <div className="Form">
-      <h1> How fast can you type </h1>
+    <div className="form">
+      <h1>
+        How fast can you type <span>?</span>
+      </h1>
       <form>
         <textarea
+          className="textarea"
           value={props.text}
           onChange={props.handleChange}
           disabled={!props.isStarted}
         />
-        <button onClick={props.handleClick} disabled={props.isStarted}>
+        <br />
+        <button
+          className="btn"
+          onClick={props.handleClick}
+          disabled={props.isStarted}
+        >
           Start
         </button>
       </form>
